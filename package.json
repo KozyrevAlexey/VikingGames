@@ -1,7 +1,7 @@
 {
-  "name": "ragnarok",
+  "name": "vikinggames",
   "version": "1.0.0",
-  "description": "Pet-project: Ragnarok",
+  "description": "Pet-project: Viking Games",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
