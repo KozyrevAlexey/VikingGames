@@ -9,4 +9,4 @@ body{background:#1c2023;color:#fff;font-family:Rubik,Roboto,sans-serif;overflow-
 /*!**************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/assets/styles/styles.scss ***!
   \**************************************************************************************************************************************************************************************************************************/
-
+.section-main{margin:0 auto;max-width:1920px;min-height:70vh;padding-top:40px;position:relative}.section-main:after,.section-main:before{content:"";display:block;height:764px;position:absolute;right:0;top:0;width:1363;z-index:-1}.section-main:after{background:url(images/snow.24f7fecdc25d730b4b78.gif) no-repeat 50%/cover;opacity:.1}.section-main:before{background:url(images/bg.3a54f48acf4c76c5a607.png) no-repeat 50%/cover}

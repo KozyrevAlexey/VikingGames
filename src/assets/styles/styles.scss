@@ -1,0 +1,32 @@
+
+
+.section {
+  &-main {
+    padding-top: 40px;
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    min-height: 700px;
+
+    &:after,
+    &:before {
+      height: 764px;
+      width: 1363px;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    &:after {
+      background: url(../images/snow.gif) no-repeat center/cover;
+      opacity: 0.1;
+    }
+
+    &:before {
+      background: url(../images/bg.png) no-repeat center/cover;
+    }
+  }
+}
