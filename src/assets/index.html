@@ -18,13 +18,13 @@
 <body>
   <section class="section section-main">
     <div class="container">
-      <header class="header">
-        <div class="header-menu">
+      <header class="header flex">
+        <div class="header-menu flex">
           <div class="header-menu__button">
             <span></span>
           </div>
           <nav class="header-menu__list">
-            <ul>
+            <ul class="flex flex-center">
               <li>
                 <a class="header-menu__link menu-link" href="#editions">
                   editions
@@ -91,27 +91,31 @@
             </ul>
           </nav>
         </div>
-        <div class="header-timer">
+        <div class="header-timer flex flex-center">
           <span>Release:</span>
-          <div class="header-timer__values">
-            <div class="header-timer__item-value" id="days">0</div>
-            <div class="header-timer__item-info">D</div>
+          <div class="header-timer__values flex flex-center">
+            <div class="header-timer__item">
+              <div class="header-timer__item-value" id="days">0</div>
+              <div class="header-timer__item-info">D</div>
+            </div>
+
+            <div class="header-timer__item">
+              <div class="header-timer__item-value" id="hours">0</div>
+              <div class="header-timer__item-info">H</div>
+            </div>
+
+            <div class="header-timer__item">
+              <div class="header-timer__item-value" id="minutes">0</div>
+              <div class="header-timer__item-info">M</div>
+            </div>
+
+            <div class="header-timer__item">
+              <div class="header-timer__item-value" id="seconds">0</div>
+              <div class="header-timer__item-info">S</div>
+            </div>
           </div>
 
-          <div class="header-timer__values">
-            <div class="header-timer__item-value" id="hours">0</div>
-            <div class="header-timer__item-info">H</div>
-          </div>
 
-          <div class="header-timer__values">
-            <div class="header-timer__item-value" id="minutes">0</div>
-            <div class="header-timer__item-info">M</div>
-          </div>
-
-          <div class="header-timer__values">
-            <div class="header-timer__item-value" id="seconds">0</div>
-            <div class="header-timer__item-info">S</div>
-          </div>
         </div>
       </header>
       <div class="description">
@@ -122,7 +126,7 @@
             three summers, is drawing to a close which will begin the prophesied Ragnarök
           </div>
           <div class="description-button">
-            <span>Buy now</span>
+            Buy now
           </div>
         </div>
       </div>
