@@ -11,7 +11,7 @@
   color: $white;
   cursor: pointer;
   text-transform: uppercase;
-  transition: backgraund 0.25s;
+  transition: background 0.25s;
 }
 
 @mixin hoverViolet {
@@ -21,5 +21,21 @@
 
   &:active {
     background: #6039a0;
+  }
+}
+
+@mixin bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin hoverOrange {
+  &:hover {
+    background: #f8625a;
+  }
+
+  &:active {
+    background: #a4221c;
   }
 }
