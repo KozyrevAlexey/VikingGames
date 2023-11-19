@@ -224,13 +224,152 @@
         <h3 class="video-title">Watch the Trailer</h3>
         <div class="video-button">play</div>
       </div>
-      <video
-      src="./images/video.mp4"
-      id="video"
-      poster="<%=require('./images/bg-video.png')%>"></video>
+      <video src="./images/video.mp4" id="video" poster="<%=require('./images/bg-video.png')%>"></video>
     </div>
   </section>
+  <section class="section section-explore" id="explore">
+    <div class="container">
+      <h2 class="container__title">Explore the God of War series</h2>
+      <div class="explore-items">
 
+        <div class="explore-item">
+          <h3 class="explore-item__title">Here are the God of War (PC) System Requirements
+          </h3>
+
+          <div class="explore-switch flex flex-center">
+            <div class="explore-switch__title active" data-requirements="minimum">
+              Minimum
+            </div>
+
+            <div class="explore-switch__checkbox">
+              <input type="checkbox" name="requirements" class="checkbox" />
+              <span></span>
+            </div>
+
+            <div class="explore-switch__title" data-requirements="recomended">
+              Recomendet
+            </div>
+          </div>
+
+          <div class="explore-info flex flex-center">
+            <div class="explore-img">
+              <div class="explore-img__wrap">
+                <img src="<%=require('./images/pc.png')%>" alt="Изображение воина">
+              </div>
+            </div>
+
+            <div class="explore-description">
+              <ul class="explore-list active" id="minimum">
+                <li>
+                  <span class="violet">CPU</span>: Intel i5-2500k (4 core 3.3
+                  GHz) or AMD Ryzen 3 1200 (4 core 3.1 GHz)
+                </li>
+                <li><span class="violet">RAM</span>: 8 GB</li>
+                <li><span class="violet">OS</span>: Windows 10 64-bit</li>
+                <li>
+                  <span class="violet">VIDEOCARD</span>: NVIDIA GTX 960 (4 GB)
+                  or AMD R9 290X (4 GB)
+                </li>
+                <li><span class="violet">PIXEL SHADER</span>: 5.1</li>
+                <li><span class="violet">VERTEX SHADER</span>: 5.1</li>
+                <li><span class="violet">FREE DISK SPACE</span>: 70 GB</li>
+                <li><span class="violet">DEDICATED VIDEO RAM</span>: 4 GB</li>
+              </ul>
+
+              <ul class="explore-list" id="recomended">
+                <li>
+                  <span class="violet">CPU</span>: Intel i5-2500k or AMD Ryzen
+                  5 1200
+                </li>
+                <li><span class="violet">RAM</span>: 8 GB</li>
+                <li><span class="violet">OS</span>: Windows 11 64-bit</li>
+                <li>
+                  <span class="violet">VIDEOCARD</span>: NVIDIA GTX 1060 (6
+                  GB) or AMD RX 570 (4 GB)
+                </li>
+                <li><span class="violet">PIXEL SHADER</span>: 5.1</li>
+                <li><span class="violet">VERTEX SHADER</span>: 5.1</li>
+                <li><span class="violet">FREE DISK SPACE</span>: 70 GB</li>
+                <li><span class="violet">DEDICATED VIDEO RAM</span>: 6 GB</li>
+              </ul>
+
+              <div class="explore-button buy-button">buy now</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="explore-item">
+          <h3 class="explore-item__title">God of War for PS4
+          </h3>
+
+          <div class="explore-switch flex flex-center">
+            <div class="explore-switch__title active" data-requirements="standard">
+              Standard
+            </div>
+
+            <div class="explore-switch__checkbox">
+              <input type="checkbox" name="requirements" class="checkbox" />
+              <span></span>
+            </div>
+
+            <div class="explore-switch__title" data-requirements="limited">
+              Limited
+            </div>
+          </div>
+
+          <div class="explore-item__price">18.99$</div>
+
+          <div class="explore-info flex flex-center reverse">
+            <div class="explore-img">
+              <div class="explore-img__wrap">
+                <img src="<%=require('./images/ps.png')%>" alt="Изображение воина">
+              </div>
+            </div>
+
+            <div class="explore-description">
+              <ul class="explore-list active" id="standard">
+                <li><span class="violet">Platform</span>: PS4</li>
+                <li><span class="violet">Premiere</span>: 20.4.2018</li>
+                <li>
+                  <span class="violet">Publisher</span>: Sony Interactive
+                  Entertainment Europe
+                </li>
+                <li>
+                  <span class="violet">Species</span>: Action, Adventure
+                </li>
+                <li><span class="violet">Voice</span>: English</li>
+                <li>
+                  <span class="violet">Display languages</span>: English
+                </li>
+              </ul>
+
+              <ul class="explore-list" id="limited">
+                <li><span class="violet">Platform</span>: PS4, PS5</li>
+                <li><span class="violet">Premiere</span>: 20.4.2018</li>
+                <li>
+                  <span class="violet">Publisher</span>: Sony Interactive
+                  Entertainment Europe
+                </li>
+                <li>
+                  <span class="violet">Species</span>: Action, Adventure
+                </li>
+                <li>
+                  <span class="violet">Voice</span>: English, Polish, Russian
+                </li>
+                <li>
+                  <span class="violet">Display languages</span>: English,
+                  Dutch, Polish, Russian, Turkish
+                </li>
+              </ul>
+
+              <div class="explore-button buy-button">buy now</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>
