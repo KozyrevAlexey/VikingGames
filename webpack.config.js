@@ -1,7 +1,8 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin')
+const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -19,7 +20,20 @@ module.exports = {
       directory: path.resolve(__dirname, 'build'),
     },
     open: true,
+
+
+    // compress: true,
+    // port: 9000,
+    // hot: true,
   },
+
+  // devServer: {
+  //   static: "./src",
+  //   compress: true,
+  //   port: 9000,
+  //   hot: true,
+  //   open: true,
+  // },
 
   module: {
     rules: [
@@ -31,10 +45,27 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
         type: 'asset/resource',
+
         generator: {
           filename: "images/[name].[hash][ext]"
         },
       },
+
+      {
+        test: /\.(mp4)$/,
+        use: [
+          {
+
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/[name].[hash][ext]'
+            }
+          }
+        ]
+      },
+
+
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         type: 'asset/resource',
@@ -71,7 +102,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/assets/index.html'
+      template: 'src/index.html',
     }),
     new MiniCssExtractPlugin(),
     new CleanWebpackPlugin(),

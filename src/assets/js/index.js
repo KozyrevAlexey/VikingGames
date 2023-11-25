@@ -1,17 +1,25 @@
 import "../styles/reset.scss";
 import "../styles/styles.scss";
 
+const checkboxes = {
+  requirements: ["minimum", "recomended"],
+versions: ["standard", "limited"],
+};
 
 const classes = {
   opened: 'opened',
+  active: 'active',
 }
 
 const header = document.querySelector('.header');
 const menuButton = document.querySelector('.header-menu__button');
 const menuLink = document.querySelectorAll(".menu-link");
+const checkbox = document.querySelectorAll ('.checkbox');
+
 
 const toggleMenu = () => header.classList.toggle(classes.opened);
 
+//---------скролл-----/
 const scrollToSection = (e) => {
   e.preventDefault();
   const href = e.currentTarget.getAttribute("href");
@@ -52,7 +60,23 @@ const startTimer = (date) => {
   }, 1000)
 }
 
-//----------- таймер--------------/
+//----------- чекбокс--------------/
+const handleCheckbox = ({ currentTarget: { checked, name}} ) => {
+const { active } = classes;
+const value = checkboxes[name][Number(checked)];
+const list = document.getElementById(value);
+const tabs = document.querySelectorAll(`[data-${name}]`);
+const siblings = list.parentElement.children;
+
+for (const item of siblings) item.classList.remove(active);
+for (const tab of tabs) {
+  tab.classList.remove(active);
+  tab.dataset[name] === value && tab.classList.add(active);
+}
+list.classList.add(active);
+}
+
 startTimer("April 05, 2024 00:00:00");     //  время до нконца отсчета
 menuButton.addEventListener('click', toggleMenu);
 menuLink.forEach((link) => link.addEventListener("click", scrollToSection));
+checkbox.forEach((box) => box.addEventListener("click", handleCheckbox));
