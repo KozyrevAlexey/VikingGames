@@ -1,15 +1,5 @@
-
 import "../styles/reset.scss";
 import "../styles/styles.scss";
-
-// import Swiper from 'swiper';
-// import { Navigation } from 'swiper/modules';
-
-// // import Swiper and modules styles
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-
-
 
 const checkboxes = {
   requirements: ["minimum", "recomended"],
@@ -26,10 +16,8 @@ const menuButton = document.querySelector('.header-menu__button');
 const menuLink = document.querySelectorAll(".menu-link");
 const checkbox = document.querySelectorAll ('.checkbox');
 
-
 const toggleMenu = () => header.classList.toggle(classes.opened);
 
-//---------скролл-----/
 const scrollToSection = (e) => {
   e.preventDefault();
   const href = e.currentTarget.getAttribute("href");
@@ -72,41 +60,21 @@ const startTimer = (date) => {
 
 //----------- чекбокс--------------/
 const handleCheckbox = ({ currentTarget: { checked, name}} ) => {
-const { active } = classes;
-const value = checkboxes[name][Number(checked)];
-const list = document.getElementById(value);
-const tabs = document.querySelectorAll(`[data-${name}]`);
-const siblings = list.parentElement.children;
+  const { active } = classes;
+  const value = checkboxes[name][Number(checked)];
+  const list = document.getElementById(value);
+  const tabs = document.querySelectorAll(`[data-${name}]`);
+  const siblings = list.parentElement.children;
 
-for (const item of siblings) item.classList.remove(active);
-for (const tab of tabs) {
-  tab.classList.remove(active);
-  tab.dataset[name] === value && tab.classList.add(active);
-}
-list.classList.add(active);
-}
+  for (const item of siblings) item.classList.remove(active);
+  for (const tab of tabs) {
+    tab.classList.remove(active);
+    tab.dataset[name] === value && tab.classList.add(active);
+  }
+  list.classList.add(active);
+  }
 
-//---------------Swiper-------------------/
-// const initSlider = new Swiper(".swiper", {
-//   loop: true,
-//   slidesPerView: 2,
-//   spaceBetween: 20,
-//   initialSlide: 2,
-//   autoplay: {
-//     delay: 2500,
-//     disableOnInteraction: false,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
-
-initSlider();
+  //---------------Swiper-------------------/
 startTimer("April 05, 2024 00:00:00");     //  время до нконца отсчета
 menuButton.addEventListener('click', toggleMenu);
 menuLink.forEach((link) => link.addEventListener("click", scrollToSection));
