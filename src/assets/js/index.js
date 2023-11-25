@@ -1,5 +1,15 @@
+
 import "../styles/reset.scss";
 import "../styles/styles.scss";
+
+// import Swiper from 'swiper';
+// import { Navigation } from 'swiper/modules';
+
+// // import Swiper and modules styles
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+
+
 
 const checkboxes = {
   requirements: ["minimum", "recomended"],
@@ -76,6 +86,27 @@ for (const tab of tabs) {
 list.classList.add(active);
 }
 
+//---------------Swiper-------------------/
+// const initSlider = new Swiper(".swiper", {
+//   loop: true,
+//   slidesPerView: 2,
+//   spaceBetween: 20,
+//   initialSlide: 2,
+//   autoplay: {
+//     delay: 2500,
+//     disableOnInteraction: false,
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });
+
+initSlider();
 startTimer("April 05, 2024 00:00:00");     //  время до нконца отсчета
 menuButton.addEventListener('click', toggleMenu);
 menuLink.forEach((link) => link.addEventListener("click", scrollToSection));
