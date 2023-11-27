@@ -9,6 +9,7 @@ versions: ["standard", "limited"],
 const classes = {
   opened: 'opened',
   active: 'active',
+  hidden: 'hidden',
 }
 
 const header = document.querySelector('.header');
@@ -16,6 +17,7 @@ const menuButton = document.querySelector('.header-menu__button');
 const menuLink = document.querySelectorAll(".menu-link");
 const checkbox = document.querySelectorAll ('.checkbox');
 const faqItem = document.querySelectorAll('.faq-item');
+const sections = document.querySelectorAll(".section");
 
 const toggleMenu = () => header.classList.toggle(classes.opened);
 
@@ -87,7 +89,17 @@ const handleFaqItem = ({ currentTarget: target}) => {
   content.style.height = `${isOpened ? height : 0}px`
 }
 
+//-------------------scroll----------------/
+const handleScroll = () => {
+  const { scrollY: y, innerHeight: h } = window;
+  sections.forEach((sec) => {
+    if (y > sec.offsetTop - h / 1.5) sec.classList.remove(classes.hidden);
+  });
+};
+
 startTimer("April 05, 2024 00:00:00");     //  время до нконца отсчета
+window.addEventListener("scroll", handleScroll);
+
 menuButton.addEventListener('click', toggleMenu);
 menuLink.forEach((link) => link.addEventListener("click", scrollToSection));
 checkbox.forEach((box) => box.addEventListener("click", handleCheckbox));

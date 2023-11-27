@@ -2,6 +2,37 @@
 @import "../styles/mixins.scss";
 
 .section {
+  &.hidden {
+    .editions {
+      &-item {
+        transition: transform 0s;
+        transform: translateX(-2000px);
+      }
+    }
+
+    h2 {
+      transition: opacity 0s;
+      opacity: 0;
+    }
+
+    .dual,
+    .explore-info {
+      transition: column-gap 0s;
+      column-gap: 250%;
+    }
+
+    .video {
+      transition: transform 0s;
+      transform: scale(0);
+    }
+
+    .news,
+    .faq-item {
+      transition: transform 0s;
+      transform: translateX(-200%);
+    }
+  }
+
   &-main {
     padding-top: 40px;
     position: relative;
@@ -756,6 +787,7 @@
           font-size: 25px;
           content: "+";
           transition: transform 0.25s;
+
         }
       }
     }
@@ -781,6 +813,7 @@
       span {
         &::before {
           transform: rotate(45deg);
+          color: $violet;
         }
       }
 
