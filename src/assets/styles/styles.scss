@@ -770,7 +770,7 @@
       width: 100%;
       justify-content: space-between;
       font-weight: 600;
-      font-style: 17px;
+      font-size: 17px;
       line-height: 20px;
       color: $white;
       cursor: pointer;
@@ -795,7 +795,7 @@
     &__content {
       height: 0;
       opacity: 0;
-      transform: height 0.25s, opacity 0.25s;
+      transition: height 0.25s, opacity 0.25s;
     }
 
     &__paragraph {
@@ -936,6 +936,8 @@
 }
 
 .swiper {
+
+
   &-button {
     position: absolute;
     top: 50%;
@@ -968,4 +970,8 @@
       }
     }
   }
+}
+
+.swiper-wrapper {
+  display: flex;
 }
