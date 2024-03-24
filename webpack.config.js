@@ -5,6 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const CopyPlugin = require("copy-webpack-plugin");
+
 module.exports = {
   entry: {
     main: './src/assets/js/index.js',
@@ -107,5 +109,14 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new CleanWebpackPlugin(),
     new HtmlMinimizerPlugin(),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "src/assets/images/video.mp4",
+          to: "images/[name].[hash][ext]" },
+        // { from: "other", to: "public" },
+      ],
+    }),
   ],
+
 };
